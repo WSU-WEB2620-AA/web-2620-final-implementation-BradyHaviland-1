@@ -1,0 +1,47 @@
+@use 'sass:color';
+
+$primary: #FFCE32;
+
+$input-focus-border-color: rgb(255, 206, 50);
+$input-border-width: 5px;
+$input-focus-bg: rgb(255, 206, 50);
+
+
+
+// imports
+@import 'bootstrap/scss/bootstrap';
+
+// required imports
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+@import 'bootstrap/scss/utilities/api';
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+
+// component imports
+
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/offcanvas';
+@import 'bootstrap/scss/placeholders';
+@import 'bootstrap/scss/helpers';
+
+
+// after imports

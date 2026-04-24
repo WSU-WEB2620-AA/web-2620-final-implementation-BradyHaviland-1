@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./stylesheets/main.scss">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <header class="mb-5 me-2 ms-2">
+    <nav class="navbar navbar-expand-md mt-3 rounded-3 ">
+      <button class="navbar-toggler m-2 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle navigation"><span class="navbar-toggler-icon text-primary"></span></button>
+      <!-- <div class="container-fluid"> -->
+        <div class="collapse navbar-collapse text-center " id="navbarCollapse" >
+          <ul class="home-navigation navbar-nav mb-2 mb-md-0 nav nav-pills nav-fill fs-5 me-2 ms-2" >
+            <li class="nav-item"><a class="nav-link"  href="index.html">iLandVah Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="gamedescriptions.html">Game Descriptions</a></li>
+            <li class="nav-item"><a class="nav-link" href="preorder.html">Pre-Orders</a></li>
+            <li class="nav-item"><a class="nav-link"  href="showcase.html">Game Spotlight</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contactme.html">Contact Me</a></li>
+          </ul>
+        </div>
+      <!-- </div> -->
+    </nav>
+  </header>
+
+  <!-- jumbotron -->
+   <div id="jumbo-hero" class="jumbotron px-5 py-3 align-items-center d-flex w-100">
+    <div class="hero-text text-center py-5 align-items-center align-self-center">
+
+    </div>
+   </div>
+
+    <main>
+        <section class="container mt-4">
+            <h2 class="p-4 text-center display-3">Tell Me Things</h2>
+            <p class="fs-5">This form is for you to collab with ideas, plan board game events, share ideas, art, or just saying anything you want to.</p>
+            <p class="mb-5 fs-5">Expect a response in a week after sending message.</p>
+
+            <form action="" id="contact-form" class="action needs-validation mb-3 novalidate rounded-5 fs-5">
+                <fieldset class="mb-3 rounded-3 p-3">
+                    <legend>Personal Information</legend>
+                    <p>All fields are required.</p>
+
+                    <div class="mb-3 form-check me-4">
+                        <label for="fullName" class="form-label">Full Name: <span class="fw-bold">(required)</span></label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" required aria-required="true">
+                        <div class="valid-feedback">Perfect!</div>
+                        <div class="invalid-feedback">Please provide your full name. Example: Jane Doe.</div>
+                    </div>
+
+                    <div class="mb-3 form-check me-4">
+                        <label for="email" class="form-label">Full Name: <span class="fw-bold">(required)</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required aria-required="true">
+                        <div class="valid-feedback">Perfect!</div>
+                        <div class="invalid-feedback">Please provide a valid email. Example: name@company.com</div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-3 rounded-3 p-3 me-4">
+                    <legend>Message</legend>
+                    <p>All fields are required.</p>
+                    <div class="mb-3 form-check ">
+                        <label for="reason" class="form-label">Topic: <span class="fw-bold">(required)</span></label>
+                        <select name="contact-reason" id="reason" required aria-required="true" class="container-fluid">
+                            <option value="" selected disabled >Please select:</option>
+                            <optgroup label="Things to talk about">
+                                <option value="collab">Collaboration</option>
+                                <option value="questions">Questions related to games offered on this site.</option>
+                                <option value="ideas">Requests and Ideas</option>
+                                <option value="gameLore">Random stuff about games in general</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+
+                            </optgroup>
+                        </select>
+                        <div class="valid-feedback">Perfect!</div>
+                        <div class="invalid-feedback">Please select a topic.</div>
+                    </div>
+
+                    <div class="form-check">
+                        <label for="message" class="form-label">Message Content <span class="fw-bold">(required)</span></label>
+                        <textarea name="msg-text" id="message" class="form-control" required aria-required="true" rows="10"></textarea>
+                        <div class="valid-feedback">Perfect!</div>
+                        <div class="invalid-feedback">Please write a short message.</div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-3 rounded-3 p-3 text-center">
+                    <p>I will get back to you through the email you provided, thank you!</p>
+                <button type="submit" class="btn p-2 mt-2  send-message fs-5">Send Message</button>
+                </fieldset>
+
+            </form>
+        </section>
+    </main>
+    
+     <footer class=" w-100 mb-3 py-3 ">
+      <p class="copyright text-center  ">&copy; iLandVah Games --- All Rights Reserved 2026</p>
+    </footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" class="astro-vvvwv3sm"></script>
+<script type="module" src="./javascripts/main.js"></script>
+<!-- <script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', (event) => {
+event.preventDefault();
+event.stopPropagation();
+
+// We manually validate each required field
+const inputs = form.querySelectorAll('input[required], textarea[required]');
+let firstError = null;
+
+inputs.forEach(input => {
+const isEmail = input.type === 'email';
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let isValid = true;
+
+// Validation Logic
+if (input.value.trim() === "") {
+isValid = false;
+} else if (isEmail && !emailPattern.test(input.value)) {
+isValid = false;
+}
+
+if (!isValid) {
+// 1. Visual: Add Bootstrap's error class
+input.classList.add('is-invalid');
+// 2. Accessibility: Tell screen readers the field is invalid
+input.setAttribute('aria-invalid', 'true');
+
+if (!firstError) firstError = input;
+} else {
+// Reset if user fixed it
+input.classList.remove('is-invalid');
+input.classList.add('is-valid'); // Optional: shows a green checkmark
+input.removeAttribute('aria-invalid');
+}
+});
+
+if (firstError) {
+// Move focus to the first error so the screen reader starts there
+firstError.focus();
+} else {
+// Success scenario
+alert("Message sent! Brady Haviland will get back to you shortly.");
+form.classList.remove('was-validated');
+form.reset();
+}
+});
+</script> -->
+    
+</body>
+</html>
